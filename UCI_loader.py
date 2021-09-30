@@ -76,15 +76,15 @@ class UCIDatasets():
             
 
         kf = KFold(n_splits=self.n_splits) # instantiating the KFold split object
-        self.in_dim = data.shape[1] - 1
-        self.out_dim = 1
+        self.in_dim = data.shape[1] - 2
+        self.out_dim = 2
         self.data_splits = kf.split(data)
         self.data_splits = [(idx[0], idx[1]) for idx in self.data_splits]
 
 
     def get_split(self, split=-1, train=True):
         """
-        processes the data in standard ways (normalizing et. al) and finally returns the respective torch tensors
+        processes the data in standard ways (normalizing et. al) and finally returns the respective torch tensors -- already need to have instantiated dataset
         """
         if split == -1:
             split = 0
@@ -107,5 +107,5 @@ class UCIDatasets():
             else:
                 inps = torch.from_numpy(x_test).float()
                 tgts = torch.from_numpy(y_test).float()
-                test_data = torch.utils.data.TensorDataset(inps, tgts)
+                test_data= torch.utils.data.TensorDataset(inps, tgts)
                 return test_data
