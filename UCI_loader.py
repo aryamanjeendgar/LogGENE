@@ -1,6 +1,6 @@
 import numpy as np
 import torch
-import torchvision.datasets as datasets
+# import torchvision.datasets as datasets
 import logging
 import os
 from os import path
