@@ -1,0 +1,55 @@
+#+TITLE: tmp
+
+| Dataset                       | Type of problem | Loss       | Optimizer        |
+| Heart-rate                    | Classification  | sBQC       | Adam             |
+|                               |                 | sBQC       | LALR-Adam        |
+|                               |                 | BCE        | Adam             |
+|                               |                 | BCE        | LALR-Adam        |
+| <same for all classification> |                 |            |                  |
+| D-GEX                         | Regression      | LC         | Adam             |
+|                               |                 | LC         | LBFGS            |
+|                               |                 | LC         | LALR-Adam        |
+|                               |                 | MSE        | .... <same>      |
+|                               |                 | MAE        | Adam             |
+|                               |                 | MAE        | LALR-Adam        |
+| UCI regression                | regression      | <same>     | <same>           |
+| Breast cancer                 | classification  | <sBQC/BCE> | <adam/LALR-adam> |
+
+
+- /Datasets/:
+  + UCI classification
+    - Heart-rate
+    - Pima Indian
+    - car
+    - Pneumonia
+    - Haberman
+    - Banknote
+    - ILP
+    - IMDB
+    - Ionosphere
+    - Titanic
+    - WBC
+  + D-GEX (regression)
+  + Breast cancer (classification)
+  + UCI regression (if needed)
+- /Metrics/:
+  + Regression:
+    - RMSE
+  + Classification:
+    - CP
+    - JS
+    - F1
+    - Accuracy
+- /Loss/:
+  + regression:
+    - Log-cosh
+    - MAE
+    - MSE
+  + Classification:
+    - sBQC
+    - BCE
+- /Optimizer/:
+  + Adam
+  + LBFGS
+  + LALR-Adam
+  + Try adaH

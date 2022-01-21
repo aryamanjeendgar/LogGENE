@@ -1,0 +1,3 @@
+timestamp,experiment_id,project_name,duration,emissions,energy_consumed,country_name,country_iso_code,region,on_cloud,cloud_provider,cloud_region
+2022-01-21T12:02:45,5f9ce934-d230-4d23-abc9-ef381d3b491f,codecarbon,4.274666786193848,3.0495887545859695e-05,3.657464241438898e-05,India,IND,,N,,
+2022-01-21T12:04:50,96dd4897-bcdf-4fae-8f8a-1d0620561021,codecarbon,1.9935564994812012,1.4291840776023189e-05,1.714063789881069e-05,India,IND,,N,,
