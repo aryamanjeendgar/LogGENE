@@ -89,7 +89,7 @@ class sBQRq(nn.Module):
     factor: Regularization factor to be used -- try between 0.1-1, but optimal val would vary depending on optimizer and dataset
     """
     def __init__(self):
-        super(sBQRL, self).__init__()
+        super(sBQRq, self).__init__()
 
     def forward(self, y, yhat, qs, model, loader, factor):
         tmp= sBQR(y, yhat, qs)
@@ -100,9 +100,9 @@ class sBQRl(nn.Module):
     Torch wrapper around the loss -- to be used when training single quantiles
     """
     def __init__(self):
-        super(sBQRL, self).__init__()
+        super(sBQRl, self).__init__()
 
-    def forward(self, y, yhat, qs, model, loader, factor):
+    def forward(self, y, yhat, tau):
         return baresBQR(y, yhat, tau)
 
 
