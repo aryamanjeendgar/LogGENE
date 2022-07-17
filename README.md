@@ -1,8 +1,3 @@
-
-# Table of Contents
-
-
-
 This repository contains code for the paper: ***LogGENE**: A smooth alternative to check loss for Deep Healthcare Inference Tasks* (pre-print can be found: [**HERE**](https://arxiv.org/abs/2206.09333))
 
 The `/utils/` folder contains the code for the actual loss functions, with torch wrappers which allows for them to be invoked in your own work simply by doing: `cirterion=loss()` (where `loss` is `TiltedLossLC` if you want to use the tilted log cosh in a regression problem, `sBQRq` if you want to learn multiple quantiles in a binary classification problem and `sBQRl`, when you just want to learn a single quantile)
